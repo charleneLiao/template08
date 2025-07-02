@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TESTO HOTEL</title>
+        <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/flatpickr.min.css" />
@@ -13,30 +14,39 @@
     <link rel="stylesheet" href="fonts/fontawesome/css/all.css" />
     <link rel="stylesheet" href="css/material-symbols-outlined.css" />
     <link rel="stylesheet" href="css/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="css/aos.css" />
-    <link rel="stylesheet" href="css/owl.carousel.min.css" />
-    <link rel="stylesheet" href="css/owl.theme.default.min.css" />
-
-    <!-- 第三方 JS（不建議用 defer）-->
-    <script src="js/include.js" defer></script>
+    <link rel="stylesheet" href="css/aos.css"/>
+    <link rel="stylesheet" href="css/owl.carousel.min.css"/>
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <!-- 外掛 JS -->
     <script src="js/jquery-3.6.0.min.js"></script>
     <script src="js/slick.min.js"></script>
     <script src="js/flatpickr.js"></script>
     <script src="js/zh.js"></script>
+
+    <!-- 自訂功能 -->
     <script src="js/include.js" defer></script>
     <script src="js/tools/goTop.js" defer></script>
-    <script src="js/aos.js"></script>
+    <script src="js/tools/toggle.js" defer></script>
     <script src="js/modules/headerComponent.js" defer></script>
+    <script src="js/modules/pageheaderComponent.js" defer></script>
+    <script src="js/modules/footerComponent.js" defer></script>
+    <script src="js/data/precautions.js" defer></script>
     <script src="js/tools/goBack.js"></script>
+    
+
     <script>
-      document.addEventListener("DOMContentLoaded", function () {
+        document.addEventListener("DOMContentLoaded", function () {
         if (typeof loadHeader === "function") loadHeader();
-      });
+            if (typeof loadpageHeader === "function") loadpageHeader();
+            if (typeof loadFooter === "function") loadFooter();
+            if (typeof loadprecautions === "function") loadprecautions();
+        });
     </script>
 
 </head>
-<body data-page="rooms">
-  <div id="headerComponent"><header class="gn-header is-sticky"><div class="navWrap">
+
+<body data-page="facility">
+  <div id="headerComponent"><header class="gn-header"><div class="navWrap">
   <div class="logo">
     <a href="index.html">
       <img src="images/ft_logo.svg" alt="LOGO" height="30">
@@ -59,6 +69,8 @@
 
   </div>
 </div></header></div>
+  <div id="pageHeader"></div>
+
     <main>
         <div id="rooms">
             <div class="container-fluid">
@@ -67,17 +79,17 @@
                         <section class="section slider-section">
                             <div class="container-fluid slider-column">
                                 <div class="swiper swiper-slider swiper-initialized swiper-horizontal swiper-backface-hidden">
-                                    <div class="swiper-wrapper" id="swiper-wrapper-d7f378b28fd54d75" aria-live="off" style="cursor: grab; transition-duration: 0ms; transform: translate3d(-1926.25px, 0px, 0px);"><img class="swiper-slide" src="images/room/room-vip05.jpg" alt="Swiper" role="group" aria-label="6 / 6" data-swiper-slide-index="5" style="width: 750.5px; margin-right: 20px;">
-                                        <img class="swiper-slide" src="images/room/room-bath.jpg" alt="Swiper" role="group" aria-label="1 / 6" data-swiper-slide-index="0" style="width: 750.5px; margin-right: 20px;">
-                                        <img class="swiper-slide swiper-slide-prev" src="images/room/room-vip.jpg" alt="Swiper" role="group" aria-label="2 / 6" data-swiper-slide-index="1" style="width: 750.5px; margin-right: 20px;">
-                                        <img class="swiper-slide swiper-slide-active" src="images/room/room-vip05.jpg" alt="Swiper" role="group" aria-label="3 / 6" data-swiper-slide-index="2" style="width: 750.5px; margin-right: 20px;">
-                                        <img class="swiper-slide swiper-slide-next" src="images/room/room-bath.jpg" alt="Swiper" role="group" aria-label="4 / 6" data-swiper-slide-index="3" style="width: 750.5px; margin-right: 20px;">
+                                    <div class="swiper-wrapper" id="swiper-wrapper-754b46a755e39122" aria-live="off" style="cursor: grab; transition-duration: 1000ms; transform: translate3d(-2014.8px, 0px, 0px);">
                                         
                                         
-                                    <img class="swiper-slide" src="images/room/room-vip.jpg" alt="Swiper" role="group" aria-label="5 / 6" data-swiper-slide-index="4" style="width: 750.5px; margin-right: 20px;"></div>
-                                    <span class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizontal"><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 1"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 2"></span><span class="swiper-pagination-bullet swiper-pagination-bullet-active" tabindex="0" role="button" aria-label="Go to slide 3" aria-current="true"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 4"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 5"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 6"></span></span>
-                                    <span class="swiper-button-prev" tabindex="0" role="button" aria-label="Previous slide" aria-controls="swiper-wrapper-d7f378b28fd54d75"></span>
-                                    <span class="swiper-button-next" tabindex="0" role="button" aria-label="Next slide" aria-controls="swiper-wrapper-d7f378b28fd54d75"></span>
+                                        
+                                        
+                                        
+                                        
+                                    <img class="swiper-slide" src="images/room/room-bath.jpg" alt="Swiper" role="group" aria-label="1 / 6" style="width: 680.8px; margin-right: 20px;" data-swiper-slide-index="0"><img class="swiper-slide" src="images/room/room-vip.jpg" alt="Swiper" role="group" aria-label="2 / 6" data-swiper-slide-index="1" style="width: 680.8px; margin-right: 20px;"><img class="swiper-slide swiper-slide-prev" src="images/room/room-vip05.jpg" alt="Swiper" role="group" aria-label="3 / 6" data-swiper-slide-index="2" style="width: 680.8px; margin-right: 20px;"><img class="swiper-slide swiper-slide-active" src="images/room/room-bath.jpg" alt="Swiper" role="group" aria-label="4 / 6" data-swiper-slide-index="3" style="width: 680.8px; margin-right: 20px;"><img class="swiper-slide swiper-slide-next" src="images/room/room-vip.jpg" alt="Swiper" role="group" aria-label="5 / 6" style="width: 680.8px; margin-right: 20px;" data-swiper-slide-index="4"><img class="swiper-slide" src="images/room/room-vip05.jpg" alt="Swiper" role="group" aria-label="6 / 6" style="width: 680.8px; margin-right: 20px;" data-swiper-slide-index="5"></div>
+                                    <span class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizontal"><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 1"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 2"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 3"></span><span class="swiper-pagination-bullet swiper-pagination-bullet-active" tabindex="0" role="button" aria-label="Go to slide 4" aria-current="true"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 5"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 6"></span></span>
+                                    <span class="swiper-button-prev" tabindex="0" role="button" aria-label="Previous slide" aria-controls="swiper-wrapper-754b46a755e39122"></span>
+                                    <span class="swiper-button-next" tabindex="0" role="button" aria-label="Next slide" aria-controls="swiper-wrapper-754b46a755e39122"></span>
                                 <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
                             </div>
                         </section>
@@ -240,9 +252,9 @@
     <div class="elem">
       <button class="panel-title">
         行政俱樂部服務
-        <span class="plus">＋</span>
+        <span class="plus" style="transform: rotate(0deg);">＋</span>
       </button>
-      <div class="panel-content policy-box">
+      <div class="panel-content policy-box" style="opacity: 0;">
         <ul class="policy-list">
           <li>行政俱樂部開放時間：06:30-22:00（限行政樓層房客使用）</li><li>行政俱樂部早餐：06:30-10:00（週六06:30-10:30）</li><li>雞尾酒會：17:00-19:00</li>
         </ul>
@@ -519,8 +531,8 @@
 </script>
 
 
-<button id="scrollToTopBtn" title="回到頂部"><i class="fa-solid fa-arrow-up-long"></i></button></body>
-<script src='https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js'></script>
+<button id="scrollToTopBtn" title="回到頂部" class=""><i class="fa-solid fa-arrow-up-long"></i></button></body>
+<script src='js/swiper-bundle.min.js'></script>
 <script src="js/swiper.js"></script>
 <script>
     const items = [
