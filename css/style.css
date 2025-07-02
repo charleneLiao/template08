@@ -3462,11 +3462,6 @@ span.flatpickr-weekday,
     height: 46vh;
   }
 }
-@media (max-width: 576px) {
-  #pageHeader .hd {
-    height: 52vh;
-  }
-}
 #pageHeader .hd .titleBox {
   border-radius: 14em;
   background: rgba(174, 224, 215, 0.5);
@@ -3482,6 +3477,14 @@ span.flatpickr-weekday,
   justify-content: center;
   align-items: center;
   top: 67px;
+}
+@media (max-width: 576px) {
+  #pageHeader .hd .titleBox h1 {
+    bottom: 1.5em;
+  }
+  #pageHeader .hd .titleBox p {
+    bottom: 10.7em;
+  }
 }
 #pageHeader .hd img {
   width: 100%;
