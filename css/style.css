@@ -376,14 +376,22 @@ section {
   padding: 2em 0;
 }
 
+#parallaxImageComponent .parallax-wrapper {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
 #parallaxImageComponent .parallax-image {
-  height: 60vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 120%;
   background-image: url("../images/banner/kaohsiung.jpg");
-  /* 替換為你的圖片路徑 */
-  background-attachment: fixed;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  z-index: -1;
 }
 
 #scrollToTopBtn {

@@ -3,6 +3,10 @@ window.loadParallaxImage = function () {
   if (!container) return;
 
   container.innerHTML = `
-    <section class="parallax-image"></section>
+  <div class="parallax-wrapper">
+    <div class="parallax-image rellax" data-rellax-speed="-8"></div>
+  </div>
+
   `;
+  
 };

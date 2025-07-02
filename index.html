@@ -24,6 +24,7 @@
     <script src="js/flatpickr.js"></script>
     <script src="js/zh.js"></script>
     <script src="js/tools/carouselTabs.js"></script>
+    <script src="js/rellax.min.js"></script>
   </head>
 <body data-aos-easing="ease" data-aos-duration="400" data-aos-delay="0" style="position: relative; min-height: 100%; top: 0px;">
     
@@ -1544,6 +1545,26 @@
 		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
 	}
 
+      // 初始化 rellax（設定 scroll 速度）
+      function initRellaxWhenReady() {
+        const target = document.querySelector(".rellax");
+        if (target) {
+          console.log("✅ Rellax 元素載入，初始化");
+          new Rellax(".rellax", {
+            speed: -3, // 調整滾動速度（-1 到 -5 都可以試）
+            center: true, // ✅ 將初始位置視為畫面中心，不會偏移
+            wrapper: null,
+            round: true,
+            vertical: true,
+            horizontal: false,
+          });
+        } else {
+          console.log("⏳ Rellax 元素未就緒，重試中...");
+          setTimeout(initRellaxWhenReady, 200); // 每 200ms 檢查一次
+        }
+      }
+
+      document.addEventListener("DOMContentLoaded", initRellaxWhenReady);
 </script>
 
 
