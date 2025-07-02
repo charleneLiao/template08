@@ -997,6 +997,11 @@ nav .menu li.open > .sub-menu {
   width: 80%;
   margin: 0 auto;
 }
+@media (max-width: 1024px) {
+  #bookingBarComponent .bookingWrap {
+    width: 100%;
+  }
+}
 #bookingBarComponent section {
   padding: 0;
 }
@@ -3457,6 +3462,11 @@ span.flatpickr-weekday,
     height: 46vh;
   }
 }
+@media (max-width: 576px) {
+  #pageHeader .hd {
+    height: 52vh;
+  }
+}
 #pageHeader .hd .titleBox {
   border-radius: 14em;
   background: rgba(174, 224, 215, 0.5);
@@ -3590,7 +3600,7 @@ span.flatpickr-weekday,
   position: absolute;
   height: 3px;
   width: 100%;
-  background: #383838;
+  background: #64bcad;
   border-radius: 9px;
   opacity: 1;
   left: 0;
@@ -3788,6 +3798,12 @@ nav ul.menu > li > a {
   line-height: 45px;
   text-decoration: none;
   color: #ffffff;
+  white-space: nowrap;
+}
+@media (max-width: 1024px) {
+  nav ul.menu > li > a {
+    padding: 0.2em 1.4em;
+  }
 }
 nav ul.menu > li > a:hover {
   background-color: #aee0d7;
