@@ -3009,6 +3009,11 @@ nav .menu li.open > .sub-menu {
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
 }
 @media (max-width: 576px) {
+  .category-group .cardAnime .card:hover {
+    border-radius: 5em 5em 1em 1em;
+  }
+}
+@media (max-width: 576px) {
   .category-group .cardAnime {
     height: auto;
   }
